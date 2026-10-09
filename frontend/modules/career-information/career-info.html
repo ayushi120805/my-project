@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Career Information | CareerGuide</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <style>
+        .career-info-page {
+            min-height: 100vh;
+            padding: 120px 20px 70px;
+            background: linear-gradient(135deg, #f5f7ff, #eef2ff);
+        }
+
+        .career-info-container {
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .module-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .module-number {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 30px;
+            background: #e0e7ff;
+            color: #4f46e5;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .module-header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .module-header p {
+            color: #64748b;
+            font-size: 17px;
+        }
+
+        .progress-box {
+            background: white;
+            padding: 18px 22px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .progress-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            height: 9px;
+            background: #e5e7eb;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            width: 80%;
+            height: 100%;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            border-radius: 20px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .career-info-card {
+            background: white;
+            padding: 28px;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+            transition: 0.3s;
+        }
+
+        .career-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 40px rgba(79, 70, 229, 0.14);
+        }
+
+        .career-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .career-icon {
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eef2ff;
+            border-radius: 15px;
+            font-size: 27px;
+            flex-shrink: 0;
+        }
+
+        .career-title h2 {
+            font-size: 22px;
+            margin: 0;
+            color: #1e293b;
+        }
+
+        .description {
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .info-section {
+            margin-top: 15px;
+        }
+
+        .info-section h4 {
+            margin-bottom: 8px;
+            color: #334155;
+        }
+
+        .info-section p {
+            color: #64748b;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            padding: 7px 11px;
+            background: #f1f5f9;
+            color: #475569;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        .next-btn {
+            display: block;
+            width: fit-content;
+            margin: 35px auto 0;
+            padding: 14px 25px;
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .next-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+        }
+
+        .empty-box {
+            background: white;
+            padding: 35px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+        }
+
+        @media (max-width: 800px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .module-header h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../../index.html" class="logo">
+                Career<span>Guide</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="../../index.html#modules">Modules</a>
+                <a href="../../index.html#about">About</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- CAREER INFORMATION -->
+    <section class="career-info-page">
+
+        <div class="career-info-container">
+
+            <div class="module-header">
+
+                <span class="module-number">
+                    MODULE 04
+                </span>
+
+                <h1>Career Information</h1>
+
+                <p>
+                    Explore skills, courses, opportunities and career paths
+                    for your recommended careers.
+                </p>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+            <div class="progress-box">
+
+                <div class="progress-top">
+                    <span>Step 4 of 5</span>
+                    <span>80% Complete</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+
+            </div>
+
+
+            <!-- CAREER CARDS -->
+            <div id="careerInfo">
+
+                <p style="text-align:center;">
+                    Loading career information...
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="career-info.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Career Assessment | CareerGuide</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <style>
+        .assessment-page {
+            min-height: 100vh;
+            padding: 120px 20px 60px;
+            background: linear-gradient(135deg, #f5f7ff, #eef2ff);
+        }
+
+        .assessment-container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .module-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .module-number {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 30px;
+            background: #e0e7ff;
+            color: #4f46e5;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .module-header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .module-header p {
+            color: #64748b;
+            font-size: 17px;
+        }
+
+        .progress-box {
+            background: white;
+            padding: 18px 22px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .progress-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            height: 9px;
+            background: #e5e7eb;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            border-radius: 20px;
+        }
+
+        .assessment-card {
+            background: white;
+            padding: 35px;
+            border-radius: 22px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .question {
+            margin-bottom: 25px;
+        }
+
+        .question label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1e293b;
+        }
+
+        .question select,
+        .question input,
+        .question textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #dbe1ea;
+            border-radius: 12px;
+            font-size: 15px;
+            outline: none;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+
+        .question select:focus,
+        .question input:focus,
+        .question textarea:focus {
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+        }
+
+        .question textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+        }
+
+        #assessmentMessage {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .tip-box {
+            margin-top: 20px;
+            padding: 18px;
+            background: #f8fafc;
+            border-left: 4px solid #6366f1;
+            border-radius: 10px;
+            color: #475569;
+        }
+
+        @media (max-width: 600px) {
+            .assessment-page {
+                padding-top: 100px;
+            }
+
+            .assessment-card {
+                padding: 22px;
+            }
+
+            .module-header h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../../index.html" class="logo">
+                Career<span>Guide</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="../../index.html#modules">Modules</a>
+                <a href="../../index.html#about">About</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ASSESSMENT PAGE -->
+    <section class="assessment-page">
+
+        <div class="assessment-container">
+
+            <!-- HEADER -->
+            <div class="module-header">
+
+                <span class="module-number">
+                    MODULE 02
+                </span>
+
+                <h1>Career Assessment</h1>
+
+                <p>
+                    Tell us about your interests, skills and goals
+                    to discover suitable career paths.
+                </p>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+            <div class="progress-box">
+
+                <div class="progress-top">
+                    <span>Step 2 of 5</span>
+                    <span>40% Complete</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+            <div class="assessment-card">
+
+                <form id="assessmentForm">
+
+                    <!-- INTEREST -->
+                    <div class="question">
+
+                        <label for="interest">
+                            1. What is your main area of interest?
+                        </label>
+
+                        <select id="interest" required>
+
+                            <option value="">
+                                Select your interest
+                            </option>
+
+                            <option value="technology">
+                                Technology & Coding
+                            </option>
+
+                            <option value="healthcare">
+                                Healthcare & Medicine
+                            </option>
+
+                            <option value="business">
+                                Business & Management
+                            </option>
+
+                            <option value="design">
+                                Design & Creativity
+                            </option>
+
+                            <option value="communication">
+                                Communication & Media
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- WORK TYPE -->
+                    <div class="question">
+
+                        <label for="workType">
+                            2. What type of work do you enjoy?
+                        </label>
+
+                        <select id="workType" required>
+
+                            <option value="">
+                                Select one
+                            </option>
+
+                            <option value="problem-solving">
+                                Problem Solving
+                            </option>
+
+                            <option value="helping">
+                                Helping People
+                            </option>
+
+                            <option value="leading">
+                                Leading Teams
+                            </option>
+
+                            <option value="creative">
+                                Creative Work
+                            </option>
+
+                            <option value="communication">
+                                Talking & Presenting
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- SKILL -->
+                    <div class="question">
+
+                        <label for="strongSkill">
+                            3. What is your strongest skill?
+                        </label>
+
+                        <input
+                            type="text"
+                            id="strongSkill"
+                            placeholder="Example: Coding, Communication, Drawing"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- MARKS -->
+                    <div class="question">
+
+                        <label for="marks">
+                            4. What is your academic percentage?
+                        </label>
+
+                        <input
+                            type="number"
+                            id="marks"
+                            min="0"
+                            max="100"
+                            placeholder="Enter percentage (0-100)"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- GOAL -->
+                    <div class="question">
+
+                        <label for="goal">
+                            5. What is your career goal?
+                        </label>
+
+                        <textarea
+                            id="goal"
+                            placeholder="Example: I want to become a software developer..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- TIP -->
+                    <div class="tip-box">
+
+                        💡 <strong>Tip:</strong>
+                        Answer honestly. Your responses will be used
+                        to generate personalized career recommendations.
+
+                    </div>
+
+                    <br>
+
+
+                    <!-- BUTTON -->
+                    <button
+                        type="submit"
+                        class="submit-btn">
+
+                        Submit Assessment & Continue →
+
+                    </button>
+
+                </form>
+
+
+                <!-- MESSAGE -->
+                <div id="assessmentMessage"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="assessment.js"></script>
+
+</body>
+
+</html>

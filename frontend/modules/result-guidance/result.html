@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Final Result | CareerGuide</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <style>
+        .result-page {
+            min-height: 100vh;
+            padding: 120px 20px 70px;
+            background: linear-gradient(135deg, #f5f7ff, #eef2ff);
+        }
+
+        .result-container {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .module-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .module-number {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 30px;
+            background: #e0e7ff;
+            color: #4f46e5;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .module-header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .module-header p {
+            color: #64748b;
+            font-size: 17px;
+        }
+
+        .progress-box {
+            background: white;
+            padding: 18px 22px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .progress-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            height: 9px;
+            background: #e5e7eb;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            border-radius: 20px;
+        }
+
+        .top-result {
+            background: white;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+        }
+
+        .result-icon {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .top-result h2 {
+            font-size: 30px;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .top-result p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .score {
+            display: inline-block;
+            margin: 15px 0;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background: #eef2ff;
+            color: #4f46e5;
+            font-weight: 800;
+            font-size: 18px;
+        }
+
+        .guidance-title {
+            text-align: center;
+            margin: 35px 0 20px;
+        }
+
+        .guidance-title h2 {
+            color: #1e293b;
+        }
+
+        .guidance-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .guidance-card {
+            background: white;
+            padding: 20px 15px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            transition: 0.3s;
+        }
+
+        .guidance-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .guidance-icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .guidance-card h3 {
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .guidance-card p {
+            font-size: 12px;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        .other-careers {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .other-careers h2 {
+            margin-bottom: 15px;
+            color: #1e293b;
+        }
+
+        .career-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .career-tag {
+            padding: 10px 15px;
+            border-radius: 20px;
+            background: #f1f5f9;
+            color: #475569;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .home-btn {
+            display: block;
+            width: fit-content;
+            margin: 35px auto 0;
+            padding: 14px 28px;
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+        }
+
+        .empty-box {
+            background: white;
+            padding: 35px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+        }
+
+        @media (max-width: 850px) {
+            .guidance-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .guidance-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .module-header h1 {
+                font-size: 30px;
+            }
+
+            .top-result {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../../index.html" class="logo">
+                Career<span>Guide</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="../../index.html#modules">Modules</a>
+                <a href="../../index.html#about">About</a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- RESULT PAGE -->
+    <section class="result-page">
+
+        <div class="result-container">
+
+            <div class="module-header">
+
+                <span class="module-number">
+                    MODULE 05
+                </span>
+
+                <h1>Final Result & Guidance</h1>
+
+                <p>
+                    Your personalized career recommendation is ready.
+                </p>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+            <div class="progress-box">
+
+                <div class="progress-top">
+                    <span>Step 5 of 5</span>
+                    <span>100% Complete</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+
+            </div>
+
+
+            <!-- RESULT -->
+            <div id="resultContainer">
+
+                <p style="text-align:center;">
+                    Preparing your final result...
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="result.js"></script>
+
+</body>
+
+</html>

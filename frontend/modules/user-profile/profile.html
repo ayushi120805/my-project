@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Profile | CareerGuide</title>
+
+    <!-- Main Website CSS -->
+    <link rel="stylesheet" href="../../style.css">
+
+    <style>
+        .module-page {
+            min-height: calc(100vh - 76px);
+            padding: 70px 7%;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(91, 92, 226, 0.10), transparent 30%),
+                #f7f9fc;
+        }
+
+        .module-container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .module-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .module-header .icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .module-header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .module-header h1 span {
+            color: #5b5ce2;
+        }
+
+        .module-header p {
+            color: #707b8e;
+        }
+
+        .progress-wrapper {
+            max-width: 650px;
+            margin: 0 auto 35px;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #697386;
+            font-weight: 600;
+        }
+
+        .module-progress {
+            height: 8px;
+            background: #e5e8ef;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .module-progress-fill {
+            width: 20%;
+            height: 100%;
+            background: linear-gradient(90deg, #5b5ce2, #7c4dff);
+        }
+
+        .profile-box {
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid #e5e9f1;
+            box-shadow: 0 20px 55px rgba(30, 40, 70, 0.08);
+        }
+
+        .profile-box h2 {
+            margin-bottom: 8px;
+        }
+
+        .profile-box .subtitle {
+            color: #788295;
+            margin-bottom: 30px;
+        }
+
+        .profile-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .profile-form .full {
+            grid-column: 1 / -1;
+        }
+
+        .profile-form label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .profile-form input,
+        .profile-form textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #dce1eb;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            font-family: inherit;
+        }
+
+        .profile-form input:focus,
+        .profile-form textarea:focus {
+            border-color: #5b5ce2;
+            box-shadow: 0 0 0 3px rgba(91, 92, 226, 0.08);
+        }
+
+        .profile-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .profile-actions {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .back-btn {
+            color: #657084;
+            font-weight: 700;
+        }
+
+        .profile-message {
+            margin-top: 20px;
+            text-align: center;
+            color: #22804a;
+            font-weight: 700;
+        }
+
+        @media (max-width: 700px) {
+
+            .module-page {
+                padding: 50px 5%;
+            }
+
+            .module-header h1 {
+                font-size: 34px;
+            }
+
+            .profile-box {
+                padding: 25px;
+            }
+
+            .profile-form {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-form .full {
+                grid-column: auto;
+            }
+
+            .profile-actions {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Career<span>Guide</span>
+        </div>
+
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../../index.html#modules">Modules</a>
+            <a href="../../index.html#about">About</a>
+        </nav>
+
+        <a href="../../index.html" class="nav-btn">
+            Home
+        </a>
+
+    </header>
+
+
+    <!-- MODULE -->
+
+    <main class="module-page">
+
+        <div class="module-container">
+
+            <!-- HEADER -->
+
+            <div class="module-header">
+
+                <div class="icon">
+                    👤
+                </div>
+
+                <div class="section-label">
+                    MODULE 01
+                </div>
+
+                <h1>
+                    Create Your
+                    <span>Profile</span>
+                </h1>
+
+                <p>
+                    Tell us a little about yourself so we can
+                    personalize your career recommendations.
+                </p>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+
+            <div class="progress-wrapper">
+
+                <div class="progress-text">
+
+                    <span>
+                        Step 1 of 5
+                    </span>
+
+                    <span>
+                        20% Complete
+                    </span>
+
+                </div>
+
+                <div class="module-progress">
+
+                    <div class="module-progress-fill"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROFILE FORM -->
+
+            <div class="profile-box">
+
+                <h2>
+                    Personal Information
+                </h2>
+
+                <p class="subtitle">
+                    Enter your details below.
+                </p>
+
+
+                <form id="profileForm" class="profile-form">
+
+
+                    <!-- NAME -->
+
+                    <div class="full">
+
+                        <label for="profileName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="profileName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- AGE -->
+
+                    <div>
+
+                        <label for="age">
+                            Age
+                        </label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            placeholder="Enter your age"
+                            min="10"
+                            max="100"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EDUCATION -->
+
+                    <div>
+
+                        <label for="education">
+                            Education
+                        </label>
+
+                        <input
+                            type="text"
+                            id="education"
+                            placeholder="e.g. Class 12, BCA, B.Tech"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- SKILLS -->
+
+                    <div class="full">
+
+                        <label for="skills">
+                            Skills
+                        </label>
+
+                        <textarea
+                            id="skills"
+                            placeholder="e.g. Coding, Communication, Drawing, Leadership"
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="profile-actions full">
+
+                        <a
+                            href="../../index.html"
+                            class="back-btn">
+                            ← Back to Home
+                        </a>
+
+                        <button
+                            type="submit"
+                            class="primary-btn">
+                            Save Profile & Continue →
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <div
+                    id="profileMessage"
+                    class="profile-message">
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="profile.js"></script>
+
+</body>
+
+</html>
